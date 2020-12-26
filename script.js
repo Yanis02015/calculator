@@ -80,8 +80,8 @@ function choice(a,z,e) {
             moy2 = a*2 + z;
             moy2 /= 3;
             }else {
-                moy1 = a;
-                moy2 = a;
+                moy1 = -4;
+                moy2 = -5;
             }
 
     if(moy1>=moy2){
