@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de moyenne - version bêta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png" />
+</head>
+<body>
+    <header>
+        <a href="">
+            <img src="logo.png" id="logo">
+            <h2 id="name">Calculator</h2>
+        </a>
+
+        <div id="id0"></div>
+    </header>
+
+    <div class="corps">
+        <form>
+            <fieldset>
+               <legend> Moyenne </legend>
+                    <table id="table">
+                        <tr>
+                            <td id="vide">
+                                <!-- space -->
+                            </td>
+                            <th>
+                                EMD
+                            </th>
+                            <th>
+                                TD
+                            </th>
+                            <th>
+                                TP
+                            </th>
+                        </tr>
+                        
+                        <!--  line 1 -->
+                        <tr>
+                            <th>
+                                BDD
+                            </th>
+                            <td>
+                                <input type="number" placeholder="BDD" id="emd-bdd">
+                            </td>
+                            <td>
+                                <input type="number" placeholder="TD BDD" id="td-bdd">
+                            </td>
+                            <td>
+                                <input type="number" placeholder="TP BDD" id="tp-bdd">
+                            </td>
+                        </tr>
+
+                        <!--  line 2 -->
+                        <tr>
+                            <th>
+                                THL
+                            </th>
+                            <td>
+                                <input type="number" placeholder="THL" id="emd-thl">
+                            </td>
+                            <td>
+                                <input type="number" placeholder="TD THL" id="td-thl">
+                            </td>
+                            <td>
+                                <input type="number" placeholder="TP THL" id="tp-thl">
+                            </td>
+                        </tr>
+
+                        <!--  line 3 -->
+                        <tr>
+                            <th>
+                                DAWEB
+                            </th>
+                            <td>
+                                <input type="number" placeholder="DAWEB" id="emd-daweb">
+                            </td>
+                            <td>
+                                <input type="number" placeholder="TD DAWEB" id="td-daweb">
+                            </td>
+                            <td>
+                                <input type="number" placeholder="TP DAWEB" id="tp-daweb">
+                            </td>
+                        </tr>
+
+                        <!--  line 4 -->
+                        <tr>
+                            <th>
+                                RX
+                            </th>
+                            <td>
+                                <input type="number" placeholder="RX" id="emd-rx">
+                            </td>
+                            <td>
+                                <input type="number" placeholder="TD RX" id="td-rx">
+                            </td>
+                            <td>
+                                <input type="number" placeholder="TP RX" id="tp-rx">
+                            </td>
+                        </tr>
+
+                        <!--  line 5 -->
+                        <tr>
+                            <th>
+                                POO
+                            </th>
+                            <td>
+                                <input type="number" placeholder="POO" id="emd-poo">
+                            </td>
+                            <td>
+                                <input type="number" placeholder="TD POO" id="td-poo">
+                            </td>
+                            <td>
+                                <input type="number" placeholder="TP POO" id="tp-poo">
+                            </td>
+                        </tr>
+
+                        <!--  line 6 -->
+                        <tr>
+                            <th>
+                                SE
+                            </th>
+                            <td>
+                                <input type="number" placeholder="SE" id="emd-se">
+                            </td>
+                            <td>
+                                <input type="number" placeholder="TD SE" id="td-se">
+                            </td>
+                            <td>
+                                <input type="number" placeholder="TP SE" id="tp-se">
+                            </td>
+                        </tr>
+
+                        <!--  line 7 -->
+                        <tr>
+                            <th>
+                                EN
+                            </th>
+                            <td>
+                                <input type="number" placeholder="EN" id="emd-en">
+                            </td>
+                            <td>
+                                <input type="number" placeholder="TD EN" id="td-en">
+                            </td>
+                            <td>
+                                <input type="number" placeholder="TP EN" id="tp-en">
+                            </td>
+                        </tr>
+                    </table>
+                    <small>Remarque : si la note du TD ou le TP n'est pas donnée, mettez un -1.</small><br>
+                    <button type="button" onclick="calculer()">Calculer le résultat!</button>
+            </fieldset>
+        </form>
+    </div>
+
+
+
+    <div id="result">
+        <h3>
+            Résultat :
+        </h3>
+        <table id="table2" class="ta">
+            <tr>
+                <th>
+
+                </th>
+                <th>
+                    BDD
+                </th>
+                <th>
+                    THL
+                </th>
+                <th>
+                    DAWEB
+                </th>
+                <th>
+                    RX
+                </th>
+                <th>
+                    POO
+                </th>
+                <th>
+                    SE
+                </th>
+                <th>
+                    EN
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    Moyenne des<br> modules
+                </th>
+                <td id="moy-bdd">
+                    -<br>-
+                </td>
+                <td id="moy-thl">
+                    -<br>-
+                </td>
+                <td id="moy-daweb">
+                    -<br>-
+                </td>
+                <td id="moy-rx">
+                    -<br>-
+                </td>
+                <td id="moy-poo">
+                    -<br>-
+                </td>
+                <td id="moy-se">
+                    -<br>-
+                </td>
+                <td id="moy-en">
+                    -<br>-
+                </td>
+            </tr>
+            <tr>
+                <th id="test">
+                    moyenne générale
+                </th>
+                <th colspan="7" id="moy-res">
+                    -<br>-
+                </th>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <footer>
+        <p>Yanis OULHACI, tous droits réservés &copy; 2020</p>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
