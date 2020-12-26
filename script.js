@@ -61,8 +61,8 @@ function calculer() {
     moy_en.innerHTML = en;
 
     // générale
-    var moy = (bdd/2+rx/2)*6 + (poo/2+daweb/2)*4 + (se*3+thl*2)/5 + en;
-    moy_res.innerHTML = moy/16;
+    var moy = (bdd*3+ rx*3 )/6 + (poo*2 + daweb*2 )/4 + (se*3 + thl*2 )/5  + en;
+    moy_res.innerHTML = moy/4;
 
 }
 
